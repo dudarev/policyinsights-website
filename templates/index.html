@@ -183,16 +183,12 @@
       <div id="news" class="our-services section py-4">
         <h3 class="section-title text-center m-5">News</h3>
         <div id="badges" class="container">
+            {% for n in news %}
             <div class="col-lg-7 col-md-10 ml-auto mr-auto">
-                <h5 class="mb-4"><a href="http://docs.wixstatic.com/ugd/856e3e_80a9b0585f764fb0a25da0458be3d289.pdf">Whitepaper</a></h4>
-                <p>Unleashing the Power of Financial Data in State and Local Governments.</p>
+                <h5 class="mb-4"><a href="{{ n.link }}">{{ n.link_text }}</a></h5>
+                <p>{{ n.description }}</p>
             </div>
-            <div class="col-lg-7 col-md-10 ml-auto mr-auto">
-                <h5 class="mb-4"><a href="http://docs.wixstatic.com/ugd/856e3e_7a0fba518f684d5a9d69a7eb5537885f.pdf">AGA Journal Spring Edition Column</a></h4>
-                <p>DATA Act First Year Reporting Completed. What's Next?</p>
-            </div>
-
-            <input class="btn btn-primary btn-pill d-flex ml-auto mr-auto" type="submit" value="&nbsp;&nbsp;See More&nbsp;&nbsp;" style="margin-top:4em; margin-bottom:3em;">
+            {% endfor %}
         </div>
       </div>
       <!-- / Our Blog Section -->
