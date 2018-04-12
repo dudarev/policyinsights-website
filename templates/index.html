@@ -1,0 +1,274 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Local Government Budget And Outcome | PolicyInsights</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS Dependencies -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "css/shards.min.css" %} ">
+        <link rel="stylesheet" href="{% static "css/shards-extras.min.css" %} ">
+        <link rel="stylesheet" href="{% static "css/style.css" %} ">
+    </head>
+    <body class="shards-landing-page--1">
+      <!-- Welcome Section -->
+      <div id="home" class="welcome d-flex justify-content-center flex-column">
+        <div class="container">
+          <!-- Navigation -->
+          <nav class="navbar navbar-expand-lg navbar-dark pt-4 px-0">
+            <a class="navbar-brand" href="#">
+              <img src="{% static "images/logo.png" %}" class="mr-2" alt="Shards - Agency Landing Page" width="100%">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">                
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#news">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://programinsights-alpha.herokuapp.com/">Product</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/policy_insights"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/company/policyinsights/"><i class="fa fa-linkedin"></i></a>
+                </li>                
+              </ul>
+            </div>
+          </nav>
+          <!-- / Navigation -->
+        </div> <!-- .container -->
+
+        <!-- Inner Wrapper -->
+        <div class="inner-wrapper mt-auto mb-auto container">
+          <div class="row">
+            <div class="col-md-6">
+                <h1 class="welcome-heading display-4 text-white">Solve problems at the local level.</h1>
+                <p class="text-white">Improve your local community with our insights.</p>
+                <a href="#about" class="btn btn-lg btn-outline-white btn-pill align-self-center">Learn More</a>
+                <a href="https://programinsights-alpha.herokuapp.com/" class="btn btn-lg btn-outline-white btn-pill align-self-center" style="margin-left:1em;">Product</a>
+            </div>
+          </div>
+        </div>
+        <!-- / Inner Wrapper -->
+      </div>
+      <!-- / Welcome Section -->
+
+      <!-- Our Blog Section -->
+      <div class="blog section section-invert py-4">
+        <p class="text-center my-5">We Help Citizens and Governments Work Together to Get to Better Outcomes through:</p>
+        <div class="container">
+          <div class="py-4">
+            <div class="row">
+              <div class="card-deck">
+              <div class="col-md-12 col-lg-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="{% static "images/card-1.jpg" %}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Insights for Citizens</h5>
+                    <p class="card-text">Budget is the heart of a government as it reflects its priorities. Our platform aims to help you gain insights into your government's priorities and performance without the burden to figure out where the data is buried on the Internet.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="{% static "images/card-3.jpg" %}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Insights for Governments</h5>
+                    <p class="card-text">We aim to help governments stretch local tax dollars so citizens can live better. Our cost-effective solution leverages artificial intelligence technology for governments to perform predictive analytics on potential impacts of the policy or budget allocation changes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-lg-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="{% static "images/card-2.jpg" %}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Open Collaboration</h5>
+                    <p class="card-text">Our platform allows users to contribute and comment on specific programs for each local area.  It expands the problem-solving and innovation ecosystem so that together we will make our communities and world better.</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Our Blog Section -->
+
+      <!-- Subscribe Section -->
+      <div class="subscribe section bg-dark py-4">
+              <div class="row">
+                <div class="feature col-md-2 d-flex"></div>
+                <div class="feature col-md-8 d-flex">
+                  <h4 class="text-center text-white m-5">PolicyInsights gives you a simple and intuitive national platform to engage with your governments to understand the services provided and their outcomes as well as to benchmark their performance against other similar cities, counties or states.</h4>      
+                </div>  
+                <div class="feature col-md-2 d-flex"></div>
+              </div>
+      </div>
+      <!-- / Subscribe Section -->
+
+      <!-- Our Services Section -->
+      <div id="about" class="our-services section py-4">
+        <h3 class="section-title text-center m-5">About</h3>
+        <!-- Features -->
+        <div class="features py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <img src="{% static "images/people.png" %}" alt="">                
+              </div>
+              <div class="col-md-6">
+                <div class="px-4">
+                    <h4 class="card-title">Mission</h4>
+                    <p>To provide a cost effective technology solution that would help local governments use artificial intelligence to: 
+                      <ul>
+                        <li style="list-style-type: none;">1) improve the citizen engagement on services and programs provided;</li>
+                        <li style="list-style-type: none;">2) inform policy decisions and service delivery.</li> 
+                      </ul>
+                      The end result is better outcomes that benefit our customers and their communities.</p>
+                    <h4 class="card-title">Vision</h4>
+                    <p>A world where public policy and investments are driven by impact and evidence.</p>
+                </div>
+              </div>
+
+              <div class="col-md-12" style="height:50px;"><hr></div>
+
+              <div class="col-md-6">
+                <div class="px-4">                    
+                    <p>
+                      <ul>
+                        <li>Christina is a problem solver, an innovator, and a disciplined risk-taker.  After twenty-four years of a successful career in the private and public sectors, she became an entrepreneur based on her vision to promote better evidence and better outcomes in public policy and services.</li>
+                        <li>Prior to launching her company, Christina successfully led the Federal Government implementation of the Digital Accountability & Transparency Act of 2014 (DATA Act) with the goal to track nearly $4 trillion dollars in annual spending and link data from multiple domains into one common standard. As a result, the public has better insights into the who, where, what, why and how much of federal spending. </li> 
+                        <li>She is applying her deep knowledge in public finance and her extensive business experience to build a company that is financially, socially and politically impactful.</li>
+                        <li>Read her <a href="https://blog.policyinsights.us">blog</a>.</li>
+                        <li>Read her recent <a href="https://federalnewsradio.com/women-of-washington/2018/01/purpose-requires-finding-the-right-mindset-early-on/">radio interview</a> on her career journey and PolicyInsights.</li>
+                      </ul>
+                    </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 text-center">
+                <img src="{% static "images/photo.png" %}" alt="" height="70%">  
+                <h5 class="mb-1">C. Christina Ho</h5>
+                    <span class="text-muted d-block mb-2">CEO & Founder</span>              
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- / Features -->
+      </div>
+      <!-- / Our Services Section -->
+
+      <!-- Our Blog Section -->
+      <div id="news" class="our-services section py-4">
+        <h3 class="section-title text-center m-5">News</h3>
+        <div id="badges" class="container">
+            <div class="col-lg-7 col-md-10 ml-auto mr-auto">
+                <h5 class="mb-4"><a href="http://docs.wixstatic.com/ugd/856e3e_80a9b0585f764fb0a25da0458be3d289.pdf">Whitepaper</a></h4>
+                <p>Unleashing the Power of Financial Data in State and Local Governments.</p>
+            </div>
+            <div class="col-lg-7 col-md-10 ml-auto mr-auto">
+                <h5 class="mb-4"><a href="http://docs.wixstatic.com/ugd/856e3e_7a0fba518f684d5a9d69a7eb5537885f.pdf">AGA Journal Spring Edition Column</a></h4>
+                <p>DATA Act First Year Reporting Completed. What's Next?</p>
+            </div>
+
+            <input class="btn btn-primary btn-pill d-flex ml-auto mr-auto" type="submit" value="&nbsp;&nbsp;See More&nbsp;&nbsp;" style="margin-top:4em; margin-bottom:3em;">
+        </div>
+      </div>
+      <!-- / Our Blog Section -->
+
+      
+
+      <!-- Contact Section -->
+      <div id="contact" class="contact section-invert py-4">
+        <h3 class="section-title text-center m-5">Contact Us</h3>
+        <div class="container py-4">
+          <div class="row justify-content-md-center px-4">
+            <div class="contact-form col-sm-12 col-md-10 col-lg-7 p-4 mb-4 card">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="contactFormFullName">Full Name</label>
+                      <input type="email" class="form-control" id="contactFormFullName" placeholder="Enter your full name">
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="contactFormEmail">Email address</label>
+                      <input type="email" class="form-control" id="contactFormEmail" placeholder="Enter your email address">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputMessage1">Message</label>
+                        <textarea id="exampleInputMessage1" class="form-control mb-4" rows="10" placeholder="Enter your message..." name="message"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <input class="btn btn-primary btn-pill d-flex ml-auto mr-auto" type="submit" value="Send Your Message">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Contact Section -->
+
+      <!-- Footer Section -->
+      <footer>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">PolicyInsights</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#news">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://programinsights-alpha.herokuapp.com/">Product</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+      </footer>
+      <!-- / Footer Section -->
+
+      <!-- JavaScript Dependencies -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+</html>
