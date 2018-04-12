@@ -201,18 +201,28 @@
         <div class="container py-4">
           <div class="row justify-content-md-center px-4">
             <div class="contact-form col-sm-12 col-md-10 col-lg-7 p-4 mb-4 card">
-              <form>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div {% if message.tags %}class="alert alert-{{ message.tags }} radius"{% endif %}>
+                            {{ message | safe }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+              <form action="/feedback/" method="post">
+                {%  csrf_token %}
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
                       <label for="contactFormFullName">Full Name</label>
-                      <input type="email" class="form-control" id="contactFormFullName" placeholder="Enter your full name">
+                      <input name='name' class="form-control" id="contactFormFullName" placeholder="Enter your full name" required>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
                       <label for="contactFormEmail">Email address</label>
-                      <input type="email" class="form-control" id="contactFormEmail" placeholder="Enter your email address">
+                      <input name='email' type="email" class="form-control" id="contactFormEmail" placeholder="Enter your email address" required>
                     </div>
                   </div>
                 </div>
@@ -220,7 +230,7 @@
                   <div class="col">
                     <div class="form-group">
                         <label for="exampleInputMessage1">Message</label>
-                        <textarea id="exampleInputMessage1" class="form-control mb-4" rows="10" placeholder="Enter your message..." name="message"></textarea>
+                        <textarea id="exampleInputMessage1" class="form-control mb-4" rows="10" placeholder="Enter your message..." name="content" required></textarea>
                     </div>
                   </div>
                 </div>

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'news.apps.NewsConfig',
+    'feedback.apps.FeedbackConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,5 +126,17 @@ STATICFILES_DIRS = [
 ]
 
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
+
+if os.environ.get('SENDGRID_USERNAME', ''):
+    # https://sendgrid.com/docs/Integrate/Frameworks/django.html
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.sendgrid.net'
+    EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', '')
+    EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', '')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'admin@policyinsights.us'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 django_heroku.settings(locals())
