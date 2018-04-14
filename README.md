@@ -11,9 +11,9 @@ https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
 On Windows:
 
 ```
-py -m pip install --upgrade pip
-py -m pip install --user virtualenv
-py -m virtualenv env
+pip install --upgrade pip
+pip install --user virtualenv
+virtualenv env
 .\env\Scripts\activate
 pip install -r requirements.txt
 ```
