@@ -4,8 +4,8 @@ from .models import Feedback
 
 
 class FeedbackForm(ModelForm):
-    content = CharField(label='', widget=Textarea)
+    captcha = CharField()  # possible values are defined in settings.ALLOWED_CAPTCHA_VALUES
 
     class Meta:
         model = Feedback
-        fields = ['name', 'email', 'content', ]
+        fields = ['name', 'email', 'content', 'captcha']

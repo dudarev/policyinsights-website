@@ -140,3 +140,5 @@ else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 django_heroku.settings(locals())
+
+ALLOWED_CAPTCHA_VALUES = ['c. christina ho', 'christina', 'christina ho', 'ho']
