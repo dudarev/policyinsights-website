@@ -155,3 +155,13 @@ if os.environ.get('DATABASE_URL', ''):
         }})
     DEBUG = False
     ALLOWED_HOSTS = ['www.policyinsights.us', 'policyinsights-website.herokuapp.com']
+
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    MIDDLEWARE = ['whitenoise.middleware.WhiteNoiseMiddleware', ] + MIDDLEWARE
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "policyinsights/static/"),
+    ]
