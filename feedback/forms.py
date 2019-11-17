@@ -1,4 +1,4 @@
-from django.forms import CharField, ModelForm, Textarea
+from django.forms import CharField, ModelForm
 
 from .models import Feedback
 
