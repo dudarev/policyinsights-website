@@ -153,4 +153,4 @@ if os.environ.get('DATABASE_URL', ''):
         'OPTIONS': {
             'MAX_CONNS': 3,  # 3 workers, 3 connections each, leaving 11 connections out of 20 for one-off tasks
         }})
-    DEBUG = False
+    # DEBUG = False
