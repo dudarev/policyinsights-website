@@ -142,3 +142,15 @@ else:
 django_heroku.settings(locals())
 
 ALLOWED_CAPTCHA_VALUES = ['c. christina ho', 'christina', 'christina ho', 'ho']
+
+if os.environ.get('DATABASE_URL', ''):
+    # https://github.com/jneight/django-db-geventpool
+    # for django 1.6 and newer version, CONN_MAX_AGE must be set to 0, or connections will never go back to the pool
+    DATABASES['default'].update({
+        'ENGINE': 'django_db_geventpool.backends.postgresql_psycopg2',
+        'ATOMIC_REQUESTS': False,
+        'CONN_MAX_AGE': 0,
+        'OPTIONS': {
+            'MAX_CONNS': 3,  # 3 workers, 3 connections each, leaving 11 connections out of 20 for one-off tasks
+        }})
+    DEBUG = False
