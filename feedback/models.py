@@ -11,7 +11,7 @@ class Feedback(models.Model):
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "{}: {}...".format(self.name, self.content[:30])
+        return "{}: {}...".format(self.name, self.content[:200])
 
     class Meta:
         ordering = ['-submitted_at', ]
